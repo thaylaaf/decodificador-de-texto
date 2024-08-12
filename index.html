@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decodificador de Texto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="lado-esquerdo">
+            <textarea id="inputText" class="input-texto" placeholder="Digite seu texto. (apenas letras minúsculas e sem caracteres especiais)"></textarea>
+            <div class="botoes">
+                <button id="botao1" onclick="criptografar()">Criptografar</button>
+                <button id="botao2" onclick="descriptografar()">Descriptografar</button>
+            </div>
+        </div>
+        <div class="lado-direito">
+            <div class="textarea-container">
+                <textarea id="outputText" readonly></textarea>
+                <img id="imagemIcone" src="./icone.png" alt="aviso de manssagem não encontrada">
+            </div>
+            <button id="copyButton" onclick="copiarTexto()">Copiar</button>
+        </div> 
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

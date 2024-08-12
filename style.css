@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #b9bada;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    padding: 20px;
+}
+
+.lado-esquerdo, .lado-direito {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.lado-esquerdo {
+    width: 70%;
+}
+
+.lado-direito {
+    width: 30%;
+    align-items: flex-end;
+    position: relative;
+}
+
+.textarea-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+textarea {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+    padding: 20px;
+    font-size: 20px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    resize: none;
+    box-sizing: border-box;
+    color: #1b004b;
+}
+
+textarea.input-texto {
+    background-color: #b9bada;
+    border: 1px solid #b9bada;
+    margin-left: 7%;
+}
+
+textarea#outputText {
+    background-color: #fdfcfd;
+    border: 1px solid #ccc;
+    position: relative;
+    z-index: 1;
+}
+
+#imagemIcone {
+    position: absolute;
+    bottom: 100px;
+    right: 50px;
+    width: 70%;
+    height: auto;
+    z-index: 1;
+}
+
+textarea:focus {
+    outline: none;
+}
+
+.botoes {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    margin-left: 7%;
+}
+
+button, #botao1, #botao2, #copyButton {
+    border: none;
+    border-radius: 20px;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    border: 2px solid #4c007d;
+    padding: 10px;
+}
+
+#botao1, #botao2, #copyButton {
+    width: 30%;
+}
+
+#botao1 {
+    background-color: #4c007d;
+}
+
+#botao1:hover {
+    background-color: #b9bada;
+    color: #4c007d;
+}
+
+#botao2 {
+    background-color: #b9bada;
+    color: #4c007d;
+}
+
+#botao2:hover {
+    background-color: #4c007d;
+    color: white;
+}
+
+#copyButton {
+    display: none;
+    background-color: white;
+    color: #1b004b;
+}
+
+#copyButton:hover {
+    background-color: #b9bada;
+}
+
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+    }
+
+    .lado-esquerdo {
+        width: 70%;
+    }
+
+    .lado-direito {
+        width: 30%;
+    }
+
+    .botoes {
+        flex-direction: row;
+    }
+
+    button {
+        padding: 15px;
+    }
+}
